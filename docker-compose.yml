@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+    container_name: nextjapan_app
+    expose:
+      - 3000
+    environment:
+      - NODE_ENV=production
+    restart: always
+
+  nginx:
+    image: nginx:latest
+    container_name: nextjapan_nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - app
+    restart: always
+
