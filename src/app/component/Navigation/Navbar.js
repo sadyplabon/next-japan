@@ -191,7 +191,7 @@ function ProfileDropdown() {
     <div className="relative group">
       <div className="flex items-center gap-2 cursor-pointer">
         <Image
-          src="https://next-japan-assets.s3.eu-north-1.amazonaws.com/images/faces/face15.jpg"
+          src="https://next-japan-assets.s3.eu-north-1.amazonaws.com/face15.jpg"
           alt="Profile"
           width={32}
           height={32}
